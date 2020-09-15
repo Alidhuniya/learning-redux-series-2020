@@ -3,6 +3,7 @@ import "./App.scss";
 
 import { connect } from 'react-redux';
 import { addPost } from "./redux/actions";
+import { loadPost } from './redux/actions/index';
 
 class App extends React.Component {
   constructor() {
@@ -11,6 +12,16 @@ class App extends React.Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => {
+        this.props.dispatch(loadPost(json))
+	  })
+	  
+	 
   }
 
   handleChange(event) {

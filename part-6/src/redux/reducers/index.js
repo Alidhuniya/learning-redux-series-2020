@@ -15,6 +15,13 @@ const initialState = {
           }
       
     }
+
+    if (action.type === actionTypes.LOAD_POSTS) {
+        return {
+          ...state,
+          posts: state.posts.concat(action.payload)
+        }
+      }
   
     return state
   }
