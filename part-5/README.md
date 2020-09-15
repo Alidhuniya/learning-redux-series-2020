@@ -1,4 +1,2 @@
-# javaScript devT-shirt shop
-
-## See here [live](https://devswag.netlify.app/)
+## [Follow this tutorial](https://www.tutorialspoint.com/redux/redux_react_example.htm)
 
