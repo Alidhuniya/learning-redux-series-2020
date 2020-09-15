@@ -1,15 +1,17 @@
-import React, { Component, Fragment } from "react";
-import "./App.scss";
-import Counter from './Counter';
+import React, { Component } from 'react';
+import './App.scss';
+import Counter from "./component/counter";
+
 
 class App extends Component {
-	render() {
-		return (
-			<Fragment>
-			<Counter />
-			</Fragment>
-		);
-	}
+   render() {
+      return (
+         <div className = "App">
+            <header className = "App-header">
+               <Counter />
+            </header>
+         </div>
+      );
+   }
 }
-
 export default App;
